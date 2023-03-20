@@ -2,7 +2,7 @@ import thingspeak
 import time
 import Adafruit_DHT
 
-channel_id = 1391845 # put here the ID of the channel you created before
+channel_id = 1391845 # This is my channel
 write_key = 'TNXXJJII892UHJ1C' # update the "WRITE KEY"
 
 pin = 4
