@@ -1,0 +1,22 @@
+<form action="Form.php" method="post">
+Name:-<input type="textbox" name="name"/>
+      <input type="submit"/></br>
+Password:-<input type="password" name="password"></br>
+Present:-
+Yes<input type="radio" name="present">
+No<input type="radio" name="present">
+City:-
+<select name="City">
+    <option>Delhi</option>
+    <option>Bareilly</option>
+</select>
+
+      
+<?php
+if(isset($_POST['name']))
+{
+echo($_POST['name']);
+}
+
+?>
+</form>

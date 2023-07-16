@@ -1,0 +1,135 @@
+1-to print an array
+<?php
+$fruits=array("Apple","Orange","Mango","Banana","Lichi");
+print_r($fruits);
+?>
+//print_r function, which prints or displays information about a variable, including its type and value.
+
+2- to print an array using var_dump function
+<?php
+$fruits=array("Apple","Orange","Mango","Banana","Lichi");
+echo var_dump($fruits);
+?>
+//var_dump print infomation about variable values and its types
+
+3-to create an array with fruits and their color
+<?php
+$fruits = array('red' => 'Apples', 'yellow' => 'Bananas',
+'brown' => 'Kiwi', 'green' => 'Watermelon');
+echo var_dump($fruits);
+?>
+
+4-to print fruits and their color with message
+<?php
+$fruits = array('red' => 'Apples', 'yellow' => 'Bananas',
+'brown' => 'Kiwi', 'green' => 'Watermelon');
+foreach ($fruits as $color => $fruit) {
+print "$fruit are $color.\n";
+}
+?>
+//Apples are red//The foreach loop works only on arrays, and is used to loop through each key/value pair in an array.
+
+5-Specifying an Array Not Beginning at Element 0
+<?php
+$presidents = array(1 => 'Washington', 'Adams', 'Jefferson', 'Madison');
+foreach ($presidents as $number => $president) {
+	print "$number: $president\n";
+   }
+?>
+
+6-Storing Multiple Elements per Key in an Array
+<?php
+$fruits = array('red' => array('strawberry','apple'),
+'yellow' => array('banana'));
+foreach ($fruits as $color => $color_fruit) {
+	// $color_fruit is an array
+	foreach ($color_fruit as $fruit) {
+	print "$fruit is colored $color.<br>";
+	}
+   }
+?>
+
+7-counting elements of an array
+<?php
+// create a "numeric" array
+$animals = array('ant', 'bee', 'cat', 'dog', 'elk', 'fox');
+print $animals[1]; // prints 'bee'
+print $animals[2]; // prints 'cat'
+print count($animals); // returns 6
+?>
+//count function returen the number of array element
+
+8-deleting elements of an array
+<?php
+$animals = array('ant', 'bee', 'cat', 'dog', 'elk', 'fox');
+// unset()
+unset($animals[1]); // removes element $animals[1] = 'bee'
+print $animals[1]; // prints nothing and throws an E_NOTICE error
+print $animals[2]; // still prints 'cat'
+count($animals); // returns 5, even though $array[5] is 'fox'
+
+?>
+//unset() deletes an element of an array
+
+9- for adding an array element at the last position
+<?php
+$animals = array('ant', 'bee', 'cat', 'dog', 'elk', 'fox');
+$animals[] = 'gnu'; // add new element (not Unix)
+print $animals[0]; // prints nothing, still throws an E_NOTICE error
+print $animals[6]; // prints 'gnu', this is where 'gnu' ended up
+count($animals); // returns 6
+// assign ''
+$animals[2] = ''; // zero out value
+print $animals[2]; // prints ''
+count($animals); // returns 6, count does not decrease
+print count($animals);
+?>
+
+10- for adding array elemen in any postion
+<?php
+$array = array('apple', 'banana', 'coconut');
+$array = array_pad($array, 4, 'dates');
+print_r($array);
+
+?>
+
+11-Checking if an Element Is in an Array
+<?php
+$book_collection = array('Emma', 'Pride and Prejudice', 'Northhanger Abbey');
+$book = 'Sense and Sensibility';
+if (in_array($book, $book_collection)) {
+ echo 'Own it.';
+} else {
+ echo 'Need it.';
+}
+?>
+//in_array() is used 
+
+12-finding position of a value in array
+$favorite_foods = array(1 => 'artichokes', 'bread', 'cauliflower',
+ 'deviled eggs');
+$food = 'cauliflower';
+$position = array_search($food, $favorite_foods);
+if ($position !== false) {
+ echo "My #$position favorite food is $food";
+} else {
+ echo "Blech! I hate $food!";
+}
+//array_search() is used
+
+13- to find min and maximum in array
+To find the largest element, use max():
+$largest = max($array);
+To find the smallest element, use min():
+$smallest = min($array);
+
+14- reversing an array
+<?php
+$array = array('Zero', 'One', 'Two');
+$reversed = array_reverse($array);
+var_dump($reversed);
+?>
+//array_reverse is the function
+
+ 
+

@@ -1,0 +1,27 @@
+<form action="Form.php" method="post">
+Name:-<input type="textbox" name="name"/>
+      <input type="submit"/></br>
+Password:-<input type="password" name="password"></br>
+Present:-
+Yes<input type="radio" name="present" value="yes">
+No<input type="radio" name="present" value="no">
+City:-
+<select name="City">
+    <option>Delhi</option>
+    <option>Bareilly</option>
+</select>
+Qualification:-
+B.tech<input type="checkbox" name="B.tech" value="b.tech">
+M.tech<input type="checkbox" name="M.tech" value="m.tech">
+
+
+      
+<?php
+if(isset($_POST['name']))
+{
+print_r($_POST['name']);
+}
+
+
+?>
+</form>

@@ -1,0 +1,9 @@
+<form action="Form.php" method="post">
+Name:-<input type="textbox" name="name"/>
+      <input type="submit"/>
+      
+<?php
+print_r($_POST);
+change
+?>
+</form>
