@@ -1,0 +1,17 @@
+City:- 
+	<?php
+	$cityArr=array('Delhi','Noida','Mumbai','Pune','Bareilly');
+	?>
+	<select name="city">
+		<option>Select City</option>
+		<?php 
+		foreach($cityArr as $list){
+			$isSelected="";
+			if($city==$list){
+				$isSelected="selected";
+			}
+			echo "<option $isSelected>".$list."</option>";
+		} 
+		?>
+	</select>
+	<br/><br/>
