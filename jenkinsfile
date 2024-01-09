@@ -1,4 +1,3 @@
-docker configuration 
 pipeline {
   agent {
     docker { image 'ubuntu' }
