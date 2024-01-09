@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'python --version' 
+        sh 'sudo apt-get update' 
       }
     }
   }
