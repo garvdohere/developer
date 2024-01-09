@@ -1,0 +1,13 @@
+docker configuration file 
+pipeline {
+  agent {
+    docker { image 'ubuntu' }
+  }
+  stages {
+    stage('Build') {
+      steps {
+        sh 'python version' 
+      }
+    }
+  }
+}
